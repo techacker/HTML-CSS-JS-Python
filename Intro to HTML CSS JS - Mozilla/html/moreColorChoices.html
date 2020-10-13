@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>More Color Choices</title>
+        <style>
+            html {
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            div {
+                width: 500px;
+                height: 500px;
+            }
+            h1 {
+                font-size: 2em;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="output">
+            <label for="theme">Select theme: </label>
+            <select id="theme">
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Purple">Purple</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Psychedelic">Psychedelic</option>
+            </select>
+            <h1>This is my website with more color choices.</h1>
+        </div>
+        <script>
+            const select = document.querySelector('select');
+            const html = document.querySelector('.output');
+
+            select.onchange = function() {
+                const choice = select.value;
+
+                switch (choice) {
+                    case 'Black':
+                        update('Black', 'White');
+                        break;
+                    case "Yellow":
+                        update("Yellow", "Black");
+                        break;
+                    case "Purple":
+                        update("Purple", "White");
+                        break;
+                    case "Psychedelic":
+                        update("Lawngreen", "Black");
+                        break;
+                    default:
+                        update("White", "Black")
+                }
+            }
+
+            function update(bgColor, textColor) {
+                html.style.backgroundColor = bgColor;
+                html.style.color = textColor;
+            }
+        </script>
+    </body>
+</html>
