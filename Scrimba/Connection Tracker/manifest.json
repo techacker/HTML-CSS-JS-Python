@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "version": "1.1",
+    "name": "Connection Tracker",
+    "description": "Collects social URL for the connections",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "server.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "author": "Anurag Bansal"
+}
